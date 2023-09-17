@@ -1,0 +1,8 @@
+tasks:
+
+  - name: my-backend
+    command: |
+      echo "update my-backend"
+      docker pull ghcr.io/pechorka/my-backend:master
+      docker rm -f my-backend
+      docker run -d -l reproxy.server=^/ -l reproxy.route=yourdomain.com/ my-backend

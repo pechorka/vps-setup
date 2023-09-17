@@ -1,0 +1,5 @@
+# default:
+#   - {route: "^/api/svc1/(.*)", dest: "http://127.0.0.1:8080/blah1/$1"}
+#   - {route: "/api/svc3/xyz", dest: "http://127.0.0.3:8080/blah3/xyz", "ping": "http://127.0.0.3:8080/ping"}
+updater.tgbots.space:
+  - {route: "^/update", dest: "http://127.0.0.1:7010/update"} # 7010 is port for updater defined in setup.sh
